@@ -1,0 +1,49 @@
+{
+    "config": {
+        "festival_name": "第48回 技科大祭",
+        "university_name": "豊橋技術科学大学",
+        "dates_short": "10/11(土)・12(日)",
+        "dates_long": "2025年10月11日(土)・12日(日)",
+        "dates_meta_desc": "2025年10月11日(土)・12日(日)",
+        "theme_ja": "繋ぐ",
+        "theme_en": "Connect",
+        "description": "2025年10月11日(土)・12日(日)に開催される豊橋技術科学大学「第48回技科大祭」の公式ホームページです。今年のテーマは「繋ぐ」。イベント、模擬店、タイムテーブル情報を発信中！",
+        "countdown_target": "Oct 11, 2025 10:00:00",
+        "countdown_end_html": "<p class='event-date'>10月11日(土)・12日(日)</p><p style='font-size: 2rem; font-weight: bold; margin-top: 1rem;'>技科大祭 開催中！</p>"
+    },
+    "links": {
+        "twitter": "https://x.com/tut_festival",
+        "instagram": "https://www.instagram.com/tut_festival/",
+        "university": "https://www.tut.ac.jp/",
+        "map_direction": "https://www.google.com/maps/dir/?api=1&destination=%E8%B1%8A%E6%A9%8B%E6%8A%80%E8%A1%93%E7%A7%91%E5%AD%A6%E5%A4%A7%E5%AD%A6",
+        "contact_email": "tut.festival@gmail.com"
+    },
+    "images": {
+        "main_poster": "data/poster.png",
+        "guest_poster": "data/poster_live.png",
+        "timetable": "data/timetable.png",
+        "access_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1582743817758!2d137.40748281152807!3d34.70118767280656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d486441646c7%3A0xb819d28be7a7df7f!2z6LGK5qmL5oqA6KGT56eR5a2m5aSn5a2m!5e0!3m2!1sja!2sjp!4v1754376149619!5m2!1sja!2sjp"
+    },
+    "sponsors": [
+        { "name": "シライミュージック", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "株式会社ミニミニ", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "株式会社ヒミカ", "image": "data/kyousan/himika.png", "url": "https://www.himika.co.jp" },
+        { "name": "株式会社サイエンス・クリエイト", "image": "data/kyousan/science.png", "url": "#" },
+        { "name": "花屋うどん", "image": "data/kyousan/no.png", "url": "https://www.instagram.com/hanayaudon?igsh=aG9jOWlzMGx1dzJ0" },
+        { "name": "株式会社水鳥", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "Planets Walker", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "メガワールド曙店", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "トピー工業株式会社", "image": "data/kyousan/topy.png", "url": "https://www.topy.co.jp/ja/index.html" },
+        { "name": "ホンダカーズ天伯店", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "NSKワーナー株式会社", "image": "data/kyousan/NSK.png", "url": "#" },
+        { "name": "株式会社オノコム", "image": "data/kyousan/onocom.png", "url": "https://www.onocom.co.jp/" },
+        { "name": "ロワジールホテル豊橋", "image": "data/kyousan/rowaji-ru.png", "url": "https://www.loisir-toyohashi.com/" },
+        { "name": "天伯校区自治会", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "LUCIDO STYLE B-SHINE", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "住まいLOVE不動産株式会社エイブルネットワーク豊橋本店", "image": "data/kyousan/eiburu.png", "url": "#" },
+        { "name": "ユタカ自動車学校", "image": "data/kyousan/yutaka.png", "url": "https://yutaka-ds.jp/toyohashi/" },
+        { "name": "モンスター", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "Zone", "image": "data/kyousan/no.png", "url": "#" },
+        { "name": "マンナンライフ", "image": "data/kyousan/no.png", "url": "#" }
+    ]
+}
