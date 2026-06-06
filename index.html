@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title data-bind-text="config.festival_name">技科大祭</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" data-bind-text="config.description">
+	<meta property="og:title" content="第48回 技科大祭 - 豊橋技術科学大学" data-bind-text="config.festival_name">
+	<meta property="og:description" content="" data-bind-text="config.description">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://gikadaisai.tut.ac.jp/">
+	<meta property="og:image" content="https://gikadaisai.tut.ac.jp/images/HP_icon.png">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@tut_festival">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="images/HP_icon.png">
+</head>
+
+<body class="home">
+	<div id="container">
+
+		<header>
+			<h1 id="logo">
+				<a href="index.html">
+					<div id="daigaku" data-bind-text="config.university_name">豊橋技術科学大学</div>
+					<div id="gikadaisai" data-bind-text="config.festival_name">第48回技科大祭</div>
+				</a>
+			</h1>
+
+			<div id="menubar">
+
+				<nav id="menubar-pc">
+					<ul>
+						<li><a href="index.html">トップ</a></li>
+						<li class="ddmenu_parent"><a href="#">企画</a>
+							<ul>
+								<li><a href="events.html">イベント</a></li>
+								<li><a href="shops.html">模擬店・キッチンカー</a></li>
+								<li><a href="timetable.html">タイムテーブル</a></li>
+							</ul>
+						</li>
+						<li><a href="outline.html">協賛</a></li>
+						<li><a href="access.html">アクセス</a></li>
+						<li><a href="contact.html">お問い合わせ</a></li>
+					</ul>
+				</nav>
+
+				<nav id="menubar-sp">
+					<ul>
+						<li><a href="index.html">トップ</a></li>
+						<li><a href="events.html">イベント</a></li>
+						<li><a href="shops.html">模擬店・キッチンカー</a></li>
+						<li><a href="timetable.html">タイムテーブル</a></li>
+						<li><a href="outline.html">協賛</a></li>
+						<li><a href="access.html">アクセス</a></li>
+						<li><a href="contact.html">お問い合わせ</a></li>
+					</ul>
+				</nav>
+
+			</div>
+			<div id="menubar_hdr">
+				<span></span><span></span><span></span>
+			</div>
+		</header>
+
+		<div id="contents">
+
+			<main>
+
+				<section class="feature-block">
+					<div class="feature-content-text">
+						<h2 class="feature-heading">
+							<span class="feature-en-heading">Theme</span>
+							<span class="feature-ja-heading">今年のテーマ</span>
+						</h2>
+						<p class="theme-showcase-text fade-in-text" data-bind-text="config.theme_ja">繋ぐ</p>
+					</div>
+					<div class="feature-poster-container">
+						<img src="data/poster.png" alt="技科大祭 テーマポスター" data-bind-src="images.main_poster">
+					</div>
+				</section>
+
+				<section class="bg1">
+					<h2 class="c"><span>Date</span><span class="hosoku">開催日</span></h2>
+					<div class="countdown-card">
+						<p class="event-date" data-bind-text="config.dates_short">10月11日(土)・12日(日)</p>
+						<p id="countdown-text">開催まで</p>
+						<div id="countdown">
+							<div class="timer-unit"><span id="days">00</span>
+								<p>日</p>
+							</div>
+							<div class="separator"></div>
+							<div class="timer-unit"><span id="hours">00</span>
+								<p>時間</p>
+							</div>
+							<div class="separator"></div>
+							<div class="timer-unit"><span id="minutes">00</span>
+								<p>分</p>
+							</div>
+							<div class="separator"></div>
+							<div class="timer-unit"><span id="seconds">00</span>
+								<p>秒</p>
+							</div>
+						</div>
+						<div class="opening-time-container">
+							<div class="opening-time-unit">
+								<span id="opening-time" class="opening-time-value">--:--</span>
+								<p class="opening-time-label">開場時間</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="guest-feature-text-only">
+					<div class="feature-content-text">
+						<h2 class="feature-heading">
+							<span class="feature-en-heading">Guest</span>
+							<span class="feature-ja-heading">今年のゲスト</span>
+						</h2>
+						<p class="guest-showcase-text fade-in-text">今年も豪華ゲストが登場！<br>詳細はイベントページをご確認ください。</p>
+						<a href="events.html" class="feature-button">イベントページへ</a>
+					</div>
+				</section>
+
+				<section class="bg1">
+					<h2 class="c"><span>Access</span><span class="hosoku">会場アクセス</span></h2>
+					<div class="access-container">
+						<div class="access-info">
+							<div class="access-method">
+								<h4><i class="fas fa-train-subway"></i>電車・バスでお越しの方</h4>
+								<div class="access-description">
+									<p><strong>JR各線・名鉄名古屋本線「豊橋駅」</strong>で下車。<br>豊橋駅東口バス乗り場から豊鉄バス「技科大線」に乗車（約25分）、「技科大前」バス停下車すぐ。
+									</p>
+									<div class="bus-countdown-wrapper">
+										<h5><i class="fas fa-bus"></i>技科大線の出発案内（豊橋駅前 発）</h5>
+										<p id="bus-schedule-note" class="note"></p>
+										<div id="bus-countdown-display">
+											<p>次の出発まであと</p>
+											<div class="time-container">
+												<span id="bus-minutes">--</span><small>分</small>
+												<span id="bus-seconds">--</span><small>秒</small>
+											</div>
+										</div>
+										<p class="next-bus-info">発車時刻: <span id="next-bus-time">--:--</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="access-method">
+								<h4><i class="fas fa-car"></i>お車でお越しの方</h4>
+								<div class="access-description">
+									<p>東名高速道路「豊川IC」より約40分。<br>国道23号線バイパス「豊橋東IC」より約10分。</p>
+									<p class="note">※当日は駐車場の混雑が予想されます。可能な限り公共交通機関のご利用にご協力ください。</p>
+								</div>
+							</div>
+						</div>
+						<div class="map-button-container">
+							<a href="#" target="_blank" class="map-button" data-bind-href="links.map_direction">
+								<span class="map-button-icon"><i class="fas fa-map-marked-alt"></i></span>
+								<span class="map-button-text">
+									<strong>Google Mapで経路を確認</strong>
+									<small>大学までのルートを検索</small>
+								</span>
+							</a>
+						</div>
+					</div>
+				</section>
+			</main>
+
+		</div>
+		<footer>
+			<div class="footer-container">
+				<div class="footer-col">
+					<div class="logo-footer">
+						<a href="index.html">
+							<span class="daigaku-footer" data-bind-text="config.university_name">豊橋技術科学大学</span>
+							<span class="gikadaisai-footer" data-bind-text="config.festival_name">第48回技科大祭</span>
+						</a>
+					</div>
+					<address class="footer-address">
+						〒441-8580<br>
+						愛知県豊橋市天伯町雲雀ヶ丘1-1
+					</address>
+				</div>
+				<div class="footer-col">
+					<h4>Menu</h4>
+					<ul class="footer-nav">
+						<li><a href="index.html">トップ</a></li>
+						<li><a href="events.html">イベント</a></li>
+						<li><a href="shops.html">模擬店・キッチンカー</a></li>
+						<li><a href="timetable.html">タイムテーブル</a></li>
+						<li><a href="outline.html">協賛</a></li>
+						<li><a href="access.html">アクセス</a></li>
+						<li><a href="contact.html">お問い合わせ</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Links</h4>
+					<ul class="footer-nav">
+						<li><a href="#" data-bind-href="links.university">大学公式サイト</a></li>
+						<li><a href="#" data-bind-href="links.twitter">公式X(Twitter)</a></li>
+						<li><a href="#" data-bind-href="links.instagram">公式Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<small>Copyright© 第48回技科大祭実行委員会 All Rights Reserved.</small>
+			</div>
+		</footer>
+		<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+	</div>
+
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-bind-text="config.festival_name">模擬店・キッチンカー - 技科大祭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="模擬店・キッチンカーの一覧です。" data-bind-text="config.description">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/HP_icon.png">
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <div id="daigaku" data-bind-text="config.university_name">豊橋技術科学大学</div>
+                    <div id="gikadaisai" data-bind-text="config.festival_name">第48回技科大祭</div>
+                </a>
+            </div>
+
+            <div id="menubar">
+                <nav id="menubar-pc">
+                    <ul>
+                        <li><a href="index.html">トップ</a></li>
+                        <li class="ddmenu_parent"><a href="#">企画</a>
+                            <ul>
+                                <li><a href="events.html">イベント</a></li>
+                                <li><a href="shops.html">模擬店・キッチンカー</a></li>
+                                <li><a href="timetable.html">タイムテーブル</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="outline.html">協賛</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <nav id="menubar-sp">
+                    <ul>
+                        <li><a href="index.html">トップ</a></li>
+                        <li><a href="events.html">イベント</a></li>
+                        <li><a href="shops.html">模擬店・キッチンカー</a></li>
+                        <li><a href="timetable.html">タイムテーブル</a></li>
+                        <li><a href="outline.html">協賛</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="contents">
+
+            <main>
+
+                <section>
+                    <h2><span>Shops</span><span class="hosoku">模擬店・キッチンカー</span></h2>
+
+                    <div class="view-options">
+                        <div class="filter-sort-controls">
+                            <div class="control-group">
+                                <label for="filter-type">絞り込み:</label>
+                                <select id="filter-type">
+                                    <option value="all" selected>すべて</option>
+                                    <option value="indoor">屋内企画</option>
+                                    <option value="tent">屋外企画</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="sort-key">並び替え:</label>
+                                <select id="sort-key">
+                                    <option value="default" selected>デフォルト</option>
+                                    <option value="circle">団体名順</option>
+                                    <option value="location">場所順</option>
+                                </select>
+                                <select id="sort-order">
+                                    <option value="asc">昇順</option>
+                                    <option value="desc">降順</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="shop-list" class="shop-list-container">
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <div id="map-modal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="map-switcher">
+                        <button class="map-switch-button" data-map-target="outside">
+                            <i class="fas fa-map-marked-alt"></i> 屋外マップ
+                        </button>
+                        <button class="map-switch-button" data-map-target="inside">
+                            <i class="fas fa-building"></i> 屋内マップ
+                        </button>
+                    </div>
+                    <button class="modal-close-btn" aria-label="閉じる">&times;</button>
+                </div>
+                <div class="map-panels-container">
+                    <div id="map-panel-outside" class="map-panel">
+                        <div class="map-zoom-container" data-map-id="outside">
+                            <img src="data/map/outside.png" alt="屋外会場マップ">
+                            <div class="map-instruction-overlay">
+                                <p><i class="fas fa-hand-pointer"></i><br>ピンチで拡大・縮小<br>ドラッグで移動できます</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map-panel-inside" class="map-panel">
+                        <div class="map-zoom-container" data-map-id="inside">
+                            <img src="data/map/inside.png" alt="屋内会場マップ">
+                            <div class="map-instruction-overlay">
+                                <p><i class="fas fa-hand-pointer"></i><br>ピンチで拡大・縮小<br>ドラッグで移動できます</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer-note">
+                    <p><i class="fas fa-info-circle"></i> マップが表示されない場合は、ページの再読み込みをお試しください。</p>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo-footer">
+                        <a href="index.html">
+                            <span class="daigaku-footer" data-bind-text="config.university_name">豊橋技術科学大学</span>
+                            <span class="gikadaisai-footer" data-bind-text="config.festival_name">第48回技科大祭</span>
+                        </a>
+                    </div>
+                    <address class="footer-address">
+                        〒441-8580<br>
+                        愛知県豊橋市天伯町雲雀ヶ丘1-1
+                    </address>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">トップ</a></li>
+                        <li><a href="events.html">イベント</a></li>
+                        <li><a href="shops.html">模擬店・キッチンカー</a></li>
+                        <li><a href="timetable.html">タイムテーブル</a></li>
+                        <li><a href="outline.html">協賛</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#" data-bind-href="links.university">大学公式サイト</a></li>
+                        <li><a href="#" data-bind-href="links.twitter">公式X(Twitter)</a></li>
+                        <li><a href="#" data-bind-href="links.instagram">公式Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>Copyright&copy; 第48回技科大祭実行委員会 All Rights Reserved.</small>
+            </div>
+        </footer>
+
+        <button id="map-button" class="fixed-button" aria-label="マップを見る"><i class="fas fa-map"></i></button>
+        <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+    </div>
+    <div id="menubar_hdr">
+        <span></span><span></span><span></span>
+    </div>
+
+    <script src="https://unpkg.com/pinch-zoom-js@2.3.5/dist/pinch-zoom.umd.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const shopListContainer = document.getElementById('shop-list');
+            const filterSelect = document.getElementById('filter-type');
+            const sortKeySelect = document.getElementById('sort-key');
+            const sortOrderSelect = document.getElementById('sort-order');
+
+            let allShops = [];
+
+            const renderList = () => {
+                if (!shopListContainer) return;
+                const filterValue = filterSelect.value;
+                let filteredShops;
+                if (filterValue === 'indoor') {
+                    filteredShops = allShops.filter(shop => shop.place === '室内');
+                } else if (filterValue === 'tent') {
+                    filteredShops = allShops.filter(shop => shop.place === '屋外');
+                } else {
+                    filteredShops = [...allShops];
+                }
+                const sortKey = sortKeySelect.value;
+                const sortOrder = sortOrderSelect.value;
+                if (sortKey !== 'default') {
+                    filteredShops.sort((a, b) => sortCompare(a, b, sortKey, sortOrder));
+                }
+                shopListContainer.innerHTML = generateHtmlForShops(filteredShops) || '<p>該当する企画はありません。</p>';
+            };
+
+            const sortCompare = (a, b, key, order) => {
+                let valA = a[key];
+                let valB = b[key];
+                let comparison = String(valA).localeCompare(String(valB), 'ja', { numeric: true, sensitivity: 'base' });
+                return order === 'asc' ? comparison : -comparison;
+            };
+
+            const generateHtmlForShops = (shops) => {
+                return shops.map(shop => {
+                    const safeTitle = shop.title.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    const safeCircle = shop.circle.replace(/"/g, "&quot;");
+                    const id = shop.id;
+                    return `
+                <div class="shop-card">
+                    <div class="shop-card-image">
+                        <img src="${shop.image}" alt="${safeCircle} アイコン" onerror="this.onerror=null; this.src='data/shop/icon/default.png';">
+                    </div>
+                    <div class="shop-card-content">
+                        <p class="shop-card-title">${safeTitle}</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-card-circle">${safeCircle}</span>
+                            <span class="shop-card-location">${shop.location}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+                }).join('');
+            };
+
+            if (filterSelect && sortKeySelect && sortOrderSelect) {
+                filterSelect.addEventListener('change', renderList);
+                sortKeySelect.addEventListener('change', renderList);
+                sortOrderSelect.addEventListener('change', renderList);
+            }
+
+            (async () => {
+                try {
+                    const response = await fetch('js/shop.json', { cache: "no-store" });
+                    if (!response.ok) throw new Error('shop.jsonの読み込みに失敗しました。');
+                    allShops = await response.json();
+                    renderList();
+                } catch (error) {
+                    console.error(error);
+                    shopListContainer.innerHTML = '<p>企画情報の読み込み中にエラーが発生しました。</p>';
+                }
+            })();
+        });
+    </script>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('map-modal');
+            if (!modal) return;
+
+            const mapButton = document.getElementById('map-button');
+            const closeBtn = modal.querySelector('.modal-close-btn');
+            const body = document.body;
+            const switcher = modal.querySelector('.map-switcher');
+            const switchButtons = modal.querySelectorAll('.map-switch-button');
+            const mapPanels = modal.querySelectorAll('.map-panel');
+
+            const zoomInstances = {};
+
+            const setupZoomForPanel = (mapId) => {
+                const container = modal.querySelector(`.map-zoom-container[data-map-id="${mapId}"]`);
+                if (!container) return;
+
+                // 画面幅が768px以下のモバイル・タブレット環境のみ処理を実行
+                if (window.innerWidth <= 768) {
+                    // Part 1: PinchZoomライブラリの初期化（初回のみ）
+                    if (!zoomInstances[mapId] && typeof PinchZoom !== 'undefined') {
+                        const instance = new PinchZoom.default(container, { minZoom: 1 });
+                        zoomInstances[mapId] = instance;
+                    }
+
+                    // Part 2: 操作ガイドを非表示にするイベントリスナーの設定
+                    const overlay = container.querySelector('.map-instruction-overlay');
+                    if (overlay) {
+                        // { once: true } オプションにより、イベントは一度だけ実行される
+                        container.addEventListener('touchstart', () => {
+                            if (!overlay.classList.contains('hidden')) {
+                                overlay.classList.add('hidden');
+                                // ★変更点：ガイドを非表示にした際に、localStorageに記録を保存
+                                localStorage.setItem('mapGuideViewed', 'true');
+                            }
+                        }, { once: true });
+                    }
+                }
+            };
+
+            const setActiveMap = (target) => {
+                mapPanels.forEach(panel => {
+                    panel.classList.toggle('active', panel.id === `map-panel-${target}`);
+                });
+                switchButtons.forEach(button => {
+                    button.classList.toggle('active', button.dataset.mapTarget === target);
+                });
+
+                setupZoomForPanel(target);
+            };
+
+            const openModal = () => {
+                body.classList.add('modal-open');
+                modal.style.display = 'block';
+
+                // ★変更点：localStorageに記録があるか確認
+                const guideViewed = localStorage.getItem('mapGuideViewed');
+
+                if (guideViewed) {
+                    // 記録がある場合（2回目以降）：強制的にガイドを非表示にする
+                    modal.querySelectorAll('.map-instruction-overlay').forEach(overlay => {
+                        overlay.classList.add('hidden');
+                    });
+                } else {
+                    // 記録がない場合（初回）：ガイドを表示する
+                    modal.querySelectorAll('.map-instruction-overlay').forEach(overlay => {
+                        overlay.classList.remove('hidden');
+                    });
+                }
+
+                setActiveMap('outside');
+            };
+
+            const closeModal = () => {
+                body.classList.remove('modal-open');
+                modal.style.display = 'none';
+            };
+
+            mapButton.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+
+            switcher.addEventListener('click', (event) => {
+                const button = event.target.closest('.map-switch-button');
+                if (button?.dataset?.mapTarget) {
+                    setActiveMap(button.dataset.mapTarget);
+                }
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) closeModal();
+            });
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.style.display === 'block') closeModal();
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
